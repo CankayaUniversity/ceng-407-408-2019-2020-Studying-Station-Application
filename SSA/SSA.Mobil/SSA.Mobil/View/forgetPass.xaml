@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.forgetPass">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="30*"></RowDefinition>
+                <RowDefinition Height="30*"></RowDefinition>
+                <RowDefinition Height="30*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Image Source="sslogoSignUp.jpg" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"></Image>
+            </Grid>
+            <Grid Margin="15" Grid.Row="1">
+                <StackLayout>
+                    <Entry x:Name="forgetPasEnterEmail" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Placeholder="E-Mail Adress" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" ClearButtonVisibility="Never"></Entry>
+                    <Button x:Name="varyCodeButton" Text="Send Verification Code" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#38A1F3" BorderColor="Transparent" TextColor="White" HeightRequest="40" FontAttributes="Bold" Clicked="varyCodeButton_Clicked"></Button>
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Row="2" Margin="15">
+                <Entry x:Name="varyCodeEntery" VerticalOptions="Start" Placeholder="Enter Varification Code" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" ClearButtonVisibility="Never" IsVisible="False"></Entry>
+                <Button x:Name="changePassButton" Text="Change Password" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#38A1F3"  BorderColor="Transparent" TextColor="White" HeightRequest="40" FontAttributes="Bold" Clicked="changePassButton_Clicked" IsVisible="False"></Button>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.signUp">
+
+    <Grid BackgroundColor="White" RowSpacing="0" ColumnSpacing="0" Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="White">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="0">
+                <Image HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Source="sslogoSignUp.jpg"></Image>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Hesabını oluştur" TextColor="Black" FontSize="20" FontAttributes="Bold" HeightRequest="60" HorizontalOptions="StartAndExpand"></Label>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="White">
+            <StackLayout>
+                <Entry x:Name="emailSignUp" Placeholder="E-Mail Adress" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+                <Entry x:Name="nameSignUp" Placeholder="Name" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="White">
+            <Entry x:Name="surnameSignUp" Placeholder="Surname" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+            <Entry x:Name="schoolSignUp" Placeholder="School Name" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Grid.Column="0" BackgroundColor="White">
+            <Entry x:Name="departmentSignUp" Placeholder="Department" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+            <Entry x:Name="passwordSignUp" Placeholder="Password" IsPassword="True" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+        </StackLayout>
+        <StackLayout Grid.Column="0" Grid.Row="4" BackgroundColor="White">
+            <StackLayout>
+                <Button x:Name="SignUpButton" Text="Sign Up" BackgroundColor="#38A1F3" BorderColor="Transparent" TextColor="White" HeightRequest="40" FontAttributes="Bold" Clicked="SignUpButton_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.ChangePass">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="62*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Image Source="sslogoSignUp.jpg" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"></Image>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Entry IsPassword="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="Enter New Password" TextColor="#6a6a6a" PlaceholderColor="#6a6a6a"  HeightRequest="40" ClearButtonVisibility="Never"  FontSize="11"></Entry>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Entry IsPassword="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Placeholder="Enter New Password Again" TextColor="#6a6a6a" PlaceholderColor="#6a6a6a"  HeightRequest="40" ClearButtonVisibility="Never"  FontSize="11"></Entry>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Button x:Name="changeNewPass" Text="Change New Password" VerticalOptions="Fill" HorizontalOptions="FillAndExpand" BackgroundColor="#38A1F3"  BorderColor="Transparent" TextColor="White" HeightRequest="40" FontAttributes="Bold" Clicked="changeNewPass_Clicked"></Button>
+            </Grid>
+        </Grid>  
+    </ContentPage.Content>
+</ContentPage>

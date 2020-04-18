@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.settingsChangeSurname">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#ececec">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="95*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="95*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image Source="backIcon.png" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="backIcon_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Text="Settings" TextColor="Blue" FontSize="10" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="settingsLabel_Tapped" ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="Surname" TextColor="#8a8a8a" FontSize="10" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Label>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="#ececec">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="35"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="#ececec">
+                    <Label Text="Surname" TextColor="#8a8a8a" FontSize="10" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="8"></Label>
+                </Grid>
+                <Grid Grid.Row="1" BackgroundColor="White">
+                    <Label x:Name="SurnameDataChangePage" Text="datadan gelen Soyisim" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                </Grid>
+                <Grid Grid.Row="2" BackgroundColor="White">
+                    <Entry x:Name="entrySurnameUpdate" Placeholder="Enter Change Surname" FontSize="11" PlaceholderColor="#6a6a6a" BackgroundColor="#e9e9e9  " TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+                </Grid>
+                <Grid Grid.Row="3" BackgroundColor="White">
+                    <Button x:Name="ChangeSurname" Text="Update My Surname" BackgroundColor="White" TextColor="Blue" FontSize="8" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="ChangeSurname_Clicked"></Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

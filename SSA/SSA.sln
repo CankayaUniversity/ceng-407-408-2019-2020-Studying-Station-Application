@@ -7,11 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSA.Mobil.Android", "SSA.Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSA.Mobil.iOS", "SSA.Mobil\SSA.Mobil.iOS\SSA.Mobil.iOS.csproj", "{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSA.Mobil", "SSA.Mobil\SSA.Mobil\SSA.Mobil.csproj", "{58AE8993-CF83-4633-9E26-F4B5E798C5EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSA.Mobil", "SSA.Mobil\SSA.Mobil\SSA.Mobil.csproj", "{58AE8993-CF83-4633-9E26-F4B5E798C5EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B15C4C19-90BF-43AC-B26D-34D5CA136071}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSA.Web", "SSA.Web\SSA.Web.csproj", "{B884C7DE-510E-4132-9DBE-C4838D926566}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3013BA8A-C89C-4FBB-983A-D0ECDA5C3E28}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,7 +46,8 @@ Global
 		{D0D8F833-4003-48BD-8B1A-6AEF9536A72E}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{D0D8F833-4003-48BD-8B1A-6AEF9536A72E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{D0D8F833-4003-48BD-8B1A-6AEF9536A72E}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}.Debug|Any CPU.ActiveCfg = Release|iPhone
+		{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}.Debug|Any CPU.Build.0 = Release|iPhone
 		{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}.Debug|iPhone.Build.0 = Debug|iPhone
 		{8C16BB11-A74F-445D-A6EE-FE3A4BA5CF7E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator

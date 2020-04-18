@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSA.Mobil.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,10 @@ namespace SSA.Mobil
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage());
+           
+
         }
 
         protected override void OnStart()

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.addEvent">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#ececec">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="95*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <Label Text="Add Event" TextColor="#8a8a8a" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="10" ></Label>
+                <Label Text="Done" TextColor="#38A1F3" FontSize="10" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="2">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="addEventDoneTapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="60"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Text="ABOUT YOUR EVENT IDEA" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1" BackgroundColor="White">
+                        <Editor x:Name="entryEventIdea" Placeholder="Add your idea . . ." FontSize="8" PlaceholderColor="#6a6a6a" BackgroundColor="#e9e9e9  " TextColor="#6a6a6a" HeightRequest="500" HorizontalOptions="FillAndExpand"></Editor>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Label Text="SELECT YOUR EVENT DATE" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                         <StackLayout>
+                            <DatePicker x:Name="eventDate" IsVisible="True" Format="dd/MM/yyyy" FontSize="13"></DatePicker>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Row="6">
+                        <Button Text="Send Event Request" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" TextColor="Blue" FontSize="8" Clicked="eventRequestButton_Clicked"></Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

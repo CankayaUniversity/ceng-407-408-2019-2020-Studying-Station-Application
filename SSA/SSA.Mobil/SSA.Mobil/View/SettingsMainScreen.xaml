@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.SettingsMainScreen">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#ececec">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="95*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <Label Text="Settings" TextColor="#8a8a8a" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="10" ></Label>
+                <Label Text="Done" TextColor="#38A1F3" FontSize="10" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="2">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="DoneTapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"></RowDefinition>
+                        <RowDefinition Height="90*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1" BackgroundColor="#ececec">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" BackgroundColor="#ececec">
+                                <Label Text="ACCOUNT SETTINGS" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                            </Grid>
+                            <Grid Grid.Row="1" BackgroundColor="White" >
+                                <StackLayout x:Name="ChangeName" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangeName_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="Name" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label x:Name="NameData" Text="datadan gelen isim" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                            </Grid>
+                            <Grid Grid.Row="2" BackgroundColor="#ececec">
+                                <StackLayout x:Name="ChangeSurname" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangeSurname_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="Surname" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label x:Name="SurnameData" Text="datadan gelen soy isim" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" Margin="8" ></Label>
+                            </Grid>
+                            <Grid Grid.Row="3" BackgroundColor="#ececec">
+                                <StackLayout x:Name="ChangeEmail" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangeEmail_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="E-Mail" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label x:Name="eMailData" Text="datadan gelen e-mail" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                            </Grid>
+                            <Grid Grid.Row="4" BackgroundColor="#ececec">
+                                <StackLayout x:Name="ChangeSchool" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangeSchool_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="School Name" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label x:Name="schoolData" Text="datadan gelen school name" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                            </Grid>
+                            <Grid Grid.Row="5" BackgroundColor="#ececec">
+                                <StackLayout x:Name="ChangeDepartment" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangeDepartment_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="School Department" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label x:Name="departmentData" Text="datadan gelen department" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                            </Grid>
+                            <Grid Grid.Row="6" BackgroundColor="#ececec">
+                                <Label Text="DISCOVERY SETTINGS" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                            </Grid>
+                            <Grid Grid.Row="7" BackgroundColor="#ececec">
+                                <StackLayout x:Name="ChangeLocation" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangeLocation_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="Location" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label Text="Current Data" TextColor="#8a8a8a" FontSize="10" VerticalTextAlignment="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                                <Label x:Name="locationData" Text="datadan gelen Location" TextColor="#8a8a8a" FontSize="7" VerticalOptions="End" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                            </Grid>
+                        </Grid>
+                        
+                    </Grid>
+                </Grid>
+                
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+

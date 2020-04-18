@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.userPage">
+
+
+
+    <Grid BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+            <ColumnDefinition Width="80*"></ColumnDefinition>
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--  <Image Source="back2.jpg" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.ColumnSpan="3"></Image>  -->
+        
+        <StackLayout Grid.Column="0" >
+            <Image VerticalOptions="Start" HorizontalOptions="Start" Source="calendarIcon.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Calendar_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"></RowDefinition>
+                <RowDefinition Height="50*"></RowDefinition>
+                <RowDefinition Height="50*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Image Source="userIcon.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" ></Image>
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="White">
+                <!--USER FOTO VE İSİM YAŞ OKUL BÖLÜM BİLGİSİ -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70*"></RowDefinition>
+                    <RowDefinition Height="10*"></RowDefinition>
+                    <RowDefinition Height="10*"></RowDefinition>
+                    <RowDefinition Height="10*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Frame CornerRadius="100" HeightRequest="130" WidthRequest="130" BackgroundColor="#d8d8d8 " Margin="0" Padding="0" VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Frame>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Label Text="İSİM SOYİSİM" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Label>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" BackgroundColor="Transparent">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"></RowDefinition>
+                        <RowDefinition Height="30*"></RowDefinition>
+                        <RowDefinition Height="40*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Image Source="addMediaIcon.png" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                        <Label Text="ADD MEDIA" TextColor="#d5d5d7" FontSize="10" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"></ColumnDefinition>
+                                <ColumnDefinition Width="50*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Image Source="settingsIcon.png" HorizontalOptions="Center" VerticalOptions="Start" >
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="settingsTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                        <Label Text="SETTINGS" TextColor="#d5d5d7" FontSize="10" FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="Center"></Label>
+                                    </Grid>
+                                </Grid>
+
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Image Source="editIcon.png" HorizontalOptions="Center" VerticalOptions="Start">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="editInfo_Tapped"></TapGestureRecognizer>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                        <Label Text="EDIT INFO" TextColor="#d5d5d7" FontSize="10" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="Center"></Label>
+                                    </Grid>
+                                </Grid>
+
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2" BackgroundColor="White">
+                        <!-- <Frame CornerRadius="100" HeightRequest="50" WidthRequest="300" BackgroundColor="Gray" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="Center"></Frame>   -->
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <StackLayout Grid.Column="2" BackgroundColor="Transparent">
+            <Image VerticalOptions="Start" HorizontalOptions="End" Source="messageIcon.png"></Image>
+        </StackLayout>
+        
+
+    </Grid>
+</ContentPage>

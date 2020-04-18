@@ -15,6 +15,22 @@ namespace SSA.Mobil.View
         public LoginPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+        
+        private async void TappedSignUpLabel(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new signUp());
+        }
+
+        private async void SignInButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new userPage());
+        }
+
+        private async void TappedForgotPass(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new forgetPass());
         }
     }
 }
