@@ -19,7 +19,7 @@ namespace SSA.Mobil.Database
         {
             client = new FirebaseClient("https://ssaplication.firebaseio.com/");
             userAuth = new FirebaseAuth();
-            firebaseAuthProvider = new FirebaseAuthProvider(new FirebaseConfig(CONFIG_KEY));  
+            firebaseAuthProvider = new FirebaseAuthProvider(new FirebaseConfig(CONFIG_KEY));
         }
     }
 }

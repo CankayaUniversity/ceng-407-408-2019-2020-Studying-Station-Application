@@ -35,7 +35,8 @@
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="30"></RowDefinition>
-                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0" BackgroundColor="#ececec">
                                 <Label Text="ACCOUNT SETTINGS" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
@@ -77,9 +78,18 @@
                                 <Label Text="School Department" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
                                 <Label x:Name="departmentData" Text="" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
                             </Grid>
+                            <Grid Grid.Row="5" BackgroundColor="#ececec">
+                                <StackLayout x:Name="ChangePassword" BackgroundColor="White">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ChangePassword_Tapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <Label Text="Change Password" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                            </Grid>
+                            
                             <!-- 
                             <Grid Grid.Row="6" BackgroundColor="#ececec">
-                                <Label Text="DISCOVERY SETTINGS" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
+                                <Label Text="Change" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
                             </Grid>
                                 
                             <Grid Grid.Row="7" BackgroundColor="#ececec">

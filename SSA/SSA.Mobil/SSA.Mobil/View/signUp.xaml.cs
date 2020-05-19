@@ -21,6 +21,7 @@ namespace SSA.Mobil.View
         DbFirebaseAuth service = new DbFirebaseAuth();
         DBHelper db = new DBHelper();
         userData user1 = new userData();
+        int count;
         public signUp()
         {
             InitializeComponent();

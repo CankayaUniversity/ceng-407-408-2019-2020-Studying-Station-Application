@@ -65,5 +65,10 @@ namespace SSA.Mobil.View
         {
             await Navigation.PushAsync(new settingsLocationPage());
         }
+
+        private async void ChangePassword_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new settingsChangePassword(UserLocalEmail.Text));
+        }
     }
 }

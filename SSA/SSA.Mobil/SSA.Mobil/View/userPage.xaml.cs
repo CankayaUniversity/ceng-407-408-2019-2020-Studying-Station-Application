@@ -89,9 +89,21 @@ namespace SSA.Mobil.View
         {
             await Navigation.PushAsync(new chatRoom(UserLocalEmail.Text));
         }
+
+        private async void DeleteUser_Tapped(object sender, EventArgs e)
+        {
+            var del = await DisplayAlert("Alert","Are you sure for delete user !","OK","CANCEL");
+            if (del == true)
+            {
+                await service.firebaseAuthProvider.DeleteUserAsync(UserLocalData.userToken);
+                await DBhelper.DeleteUser(UserLocalEmail.Text);
+                await Navigation.PushAsync(new LoginPage());
+            }
+            else
+            {
+                return;
+            }
+            
+        }
     }
 }
-
-
-//,userdata.Department,userdata.location,userdata.Name,userdata.password,userdata.schoolName,userdata.Surname
-//, string department, string location, string name, string password, string schoolName, string surname

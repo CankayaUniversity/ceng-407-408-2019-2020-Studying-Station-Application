@@ -13,6 +13,7 @@ namespace SSA.Mobil.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class forgetPass : ContentPage
     {
+        DbFirebaseAuth db = new DbFirebaseAuth();
         public forgetPass()
         {
             InitializeComponent();

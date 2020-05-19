@@ -58,5 +58,12 @@ namespace SSA.Mobil.Database
               .Child(toUpdateUser.Key)
               .PutAsync(new userData() { Email=email, Name = name, schoolName=school,Department=department, Surname = surname, password=pass ,imageUrl = url});
         }
+        public async Task DeleteUser(string email)
+        {
+            var toDeletePerson = (await firebase
+              .Child("UserSSA")
+              .OnceAsync<userData>()).Where(a => a.Object.Email == email).FirstOrDefault();
+              await firebase.Child("UserSSA").Child(toDeletePerson.Key).DeleteAsync();
+        }
     }
 }
