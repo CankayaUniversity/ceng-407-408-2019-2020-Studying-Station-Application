@@ -13,6 +13,7 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" BackgroundColor="White">
                 <Label Text="Add Event" TextColor="#8a8a8a" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="10" ></Label>
+                <Label x:Name="UserLocalEmail" Text="" HorizontalOptions="Center" VerticalOptions="EndAndExpand" TextColor="Transparent"></Label>
                 <Label Text="Done" TextColor="#38A1F3" FontSize="10" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="2">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="addEventDoneTapped"></TapGestureRecognizer>

@@ -30,6 +30,7 @@
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="Surname" TextColor="#8a8a8a" FontSize="10" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label x:Name="UserLocalEmail" Text="" HorizontalOptions="Center" VerticalOptions="EndAndExpand" TextColor="Transparent"></Label>
                 </Grid>
             </Grid>
             <Grid Grid.Row="1" BackgroundColor="#ececec">

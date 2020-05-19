@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSA.Mobil.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,12 @@ namespace SSA.Mobil.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            
         }
 
         private async void DoneEditInfo_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new userPage());
+            await Navigation.PushAsync(new userPage(null));
         }
     }
 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "295001076100",
+    "firebase_url": "https://ssaplication.firebaseio.com",
+    "project_id": "ssaplication",
+    "storage_bucket": "ssaplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295001076100:android:a7cd17c382834f841aadd1",
+        "android_client_info": {
+          "package_name": "com.companyname.ssa.mobil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295001076100-tj8r978jv35fit1km0emu0unsvsq3v3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbD1V44kQEFLp3x5_gA3tpQKWwXB4AkBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295001076100-tj8r978jv35fit1km0emu0unsvsq3v3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

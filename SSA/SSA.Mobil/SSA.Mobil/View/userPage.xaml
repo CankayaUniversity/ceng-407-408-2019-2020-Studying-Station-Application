@@ -17,7 +17,7 @@
         <!--  <Image Source="back2.jpg" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.ColumnSpan="3"></Image>  -->
         
         <StackLayout Grid.Column="0" >
-            <Image VerticalOptions="Start" HorizontalOptions="Start" Source="calendarIcon.png">
+            <Image VerticalOptions="Start" HorizontalOptions="Start" Source="calendarIcon.png" >
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Calendar_Tapped"></TapGestureRecognizer>
                 </Image.GestureRecognizers>
@@ -35,20 +35,23 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Image Source="userIcon.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" ></Image>
+                <Label x:Name="UserLocalEmail" Text="" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" TextColor="Transparent"></Label>
             </Grid>
             <Grid Grid.Row="1" BackgroundColor="White">
                 <!--USER FOTO VE İSİM YAŞ OKUL BÖLÜM BİLGİSİ -->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70*"></RowDefinition>
                     <RowDefinition Height="10*"></RowDefinition>
-                    <RowDefinition Height="10*"></RowDefinition>
+                    <RowDefinition Height="20*"></RowDefinition>
                     <RowDefinition Height="10*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Frame CornerRadius="100" HeightRequest="130" WidthRequest="130" BackgroundColor="#d8d8d8 " Margin="0" Padding="0" VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Frame>
+                    <Frame CornerRadius="100" HeightRequest="130" WidthRequest="130" BackgroundColor="#d8d8d8 " Margin="0" Padding="0" VerticalOptions="End" HorizontalOptions="CenterAndExpand">
+                        <Image x:Name="userPhoto" VerticalOptions="Fill" HorizontalOptions="Fill"></Image>
+                    </Frame>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <Label Text="İSİM SOYİSİM" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Label>
+                    <Label x:Name="userFullName" Text="" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="EndAndExpand" TextColor="#d5d5d7"></Label>
                 </Grid>
             </Grid>
             <Grid Grid.Row="2" BackgroundColor="Transparent">
@@ -59,7 +62,11 @@
                         <RowDefinition Height="40*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Image Source="addMediaIcon.png" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                        <Image Source="addMediaIcon.png" HorizontalOptions="Center" VerticalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="AddMedia_Tapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Label Text="ADD MEDIA" TextColor="#d5d5d7" FontSize="10" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Label>
                     </Grid>
                     <Grid Grid.Row="1">
@@ -94,14 +101,14 @@
                                         <RowDefinition Height="*"></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Grid Grid.Row="0">
-                                        <Image Source="editIcon.png" HorizontalOptions="Center" VerticalOptions="Start">
+                                        <Image Source="design.png" HorizontalOptions="Center" VerticalOptions="Start">
                                             <Image.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="editInfo_Tapped"></TapGestureRecognizer>
+                                                <TapGestureRecognizer Tapped="feedbackPage_Tapped"></TapGestureRecognizer>
                                             </Image.GestureRecognizers>
                                         </Image>
                                     </Grid>
                                     <Grid Grid.Row="1">
-                                        <Label Text="EDIT INFO" TextColor="#d5d5d7" FontSize="10" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="Center"></Label>
+                                        <Label Text="FEEDBACK" TextColor="#d5d5d7" FontSize="10" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="Center"></Label>
                                     </Grid>
                                 </Grid>
 
@@ -115,7 +122,11 @@
             </Grid>
         </Grid>
         <StackLayout Grid.Column="2" BackgroundColor="Transparent">
-            <Image VerticalOptions="Start" HorizontalOptions="End" Source="messageIcon.png"></Image>
+            <Image VerticalOptions="Start" HorizontalOptions="End" Source="messageIcon.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ChatPageIcon_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
         
 

@@ -1,4 +1,5 @@
-﻿using SSA.Mobil.Model;
+﻿using SSA.Mobil.Database;
+using SSA.Mobil.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,32 +14,33 @@ namespace SSA.Mobil.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class eventPage : ContentPage
     {
-        public eventPage()
+        DBHelperEvents dbhelper = new DBHelperEvents();
+        public eventPage(string email)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            var list = new List<eventDeneme>
-            {
-                new eventDeneme{Name="Datadan gelen Eventler", imageSource="starIcon.png"},
-                new eventDeneme{ Name="Yine tekrar varsa datadan gelenler sıralanır", imageSource="starIcon.png"}
-            };
-
+            UserLocalEmail.Text = email;
+            
+        }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            var list = await dbhelper.GetAllEvents();
             lstViewEvent.ItemsSource = list;
         }
-
         private async void backEvent_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new userPage());
+            await Navigation.PushAsync(new userPage(UserLocalEmail.Text));
         }
 
         private async void backLabel_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new userPage());
+            await Navigation.PushAsync(new userPage(UserLocalEmail.Text));
         }
 
         private async void addEvent_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new addEvent());
+            await Navigation.PushAsync(new addEvent(UserLocalEmail.Text));
         }
     }
 }

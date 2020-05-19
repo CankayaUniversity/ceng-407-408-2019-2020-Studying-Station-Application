@@ -13,6 +13,7 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" BackgroundColor="White">
                 <Label Text="Settings" TextColor="#8a8a8a" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="10" ></Label>
+                <Label x:Name="UserLocalEmail" Text="" HorizontalOptions="Center" VerticalOptions="EndAndExpand" TextColor="Transparent"></Label>
                 <Label Text="Done" TextColor="#38A1F3" FontSize="10" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="2">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="DoneTapped"></TapGestureRecognizer>
@@ -34,7 +35,6 @@
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="30"></RowDefinition>
-                                <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="50"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0" BackgroundColor="#ececec">
@@ -47,7 +47,7 @@
                                     </StackLayout.GestureRecognizers>
                                 </StackLayout>
                                 <Label Text="Name" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
-                                <Label x:Name="NameData" Text="datadan gelen isim" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                                <Label x:Name="NameData" Text="" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
                             </Grid>
                             <Grid Grid.Row="2" BackgroundColor="#ececec">
                                 <StackLayout x:Name="ChangeSurname" BackgroundColor="White">
@@ -56,38 +56,32 @@
                                     </StackLayout.GestureRecognizers>
                                 </StackLayout>
                                 <Label Text="Surname" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
-                                <Label x:Name="SurnameData" Text="datadan gelen soy isim" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" Margin="8" ></Label>
+                                <Label x:Name="SurnameData" Text="" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" Margin="8" ></Label>
                             </Grid>
+                           
                             <Grid Grid.Row="3" BackgroundColor="#ececec">
-                                <StackLayout x:Name="ChangeEmail" BackgroundColor="White">
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="ChangeEmail_Tapped"></TapGestureRecognizer>
-                                    </StackLayout.GestureRecognizers>
-                                </StackLayout>
-                                <Label Text="E-Mail" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
-                                <Label x:Name="eMailData" Text="datadan gelen e-mail" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
-                            </Grid>
-                            <Grid Grid.Row="4" BackgroundColor="#ececec">
                                 <StackLayout x:Name="ChangeSchool" BackgroundColor="White">
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="ChangeSchool_Tapped"></TapGestureRecognizer>
                                     </StackLayout.GestureRecognizers>
                                 </StackLayout>
                                 <Label Text="School Name" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
-                                <Label x:Name="schoolData" Text="datadan gelen school name" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                                <Label x:Name="schoolData" Text="" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
                             </Grid>
-                            <Grid Grid.Row="5" BackgroundColor="#ececec">
+                            <Grid Grid.Row="4" BackgroundColor="#ececec">
                                 <StackLayout x:Name="ChangeDepartment" BackgroundColor="White">
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="ChangeDepartment_Tapped"></TapGestureRecognizer>
                                     </StackLayout.GestureRecognizers>
                                 </StackLayout>
                                 <Label Text="School Department" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
-                                <Label x:Name="departmentData" Text="datadan gelen department" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
+                                <Label x:Name="departmentData" Text="" TextColor="#8a8a8a" FontSize="8" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
                             </Grid>
+                            <!-- 
                             <Grid Grid.Row="6" BackgroundColor="#ececec">
                                 <Label Text="DISCOVERY SETTINGS" TextColor="#8a8a8a" FontSize="8" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="10"></Label>
                             </Grid>
+                                
                             <Grid Grid.Row="7" BackgroundColor="#ececec">
                                 <StackLayout x:Name="ChangeLocation" BackgroundColor="White">
                                     <StackLayout.GestureRecognizers>
@@ -97,7 +91,7 @@
                                 <Label Text="Location" TextColor="#8a8a8a" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Margin="10"></Label>
                                 <Label Text="Current Data" TextColor="#8a8a8a" FontSize="10" VerticalTextAlignment="Start" HorizontalOptions="EndAndExpand" Margin="8"></Label>
                                 <Label x:Name="locationData" Text="datadan gelen Location" TextColor="#8a8a8a" FontSize="7" VerticalOptions="End" HorizontalOptions="EndAndExpand" Margin="8"></Label>
-                            </Grid>
+                            </Grid>-->
                         </Grid>
                         
                     </Grid>

@@ -28,7 +28,7 @@
         </StackLayout>
         <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="White">
             <StackLayout>
-                <Entry x:Name="emailSignUp" Placeholder="E-Mail Adress" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+                <Entry x:Name="emailSignUp"  Placeholder="E-Mail Adress" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
                 <Entry x:Name="nameSignUp" Placeholder="Name" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
             </StackLayout>
         </StackLayout>
@@ -38,7 +38,7 @@
         </StackLayout>
         <StackLayout Grid.Row="3" Grid.Column="0" BackgroundColor="White">
             <Entry x:Name="departmentSignUp" Placeholder="Department" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
-            <Entry x:Name="passwordSignUp" Placeholder="Password" IsPassword="True" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+            <Entry x:Name="passwordSignUp"  Placeholder="Password" IsPassword="True" FontSize="11" PlaceholderColor="#6a6a6a" TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
         </StackLayout>
         <StackLayout Grid.Column="0" Grid.Row="4" BackgroundColor="White">
             <StackLayout>

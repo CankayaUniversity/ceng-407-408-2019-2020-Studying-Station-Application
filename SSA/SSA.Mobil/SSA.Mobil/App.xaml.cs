@@ -12,8 +12,6 @@ namespace SSA.Mobil
             InitializeComponent();
             MainPage = new MainPage();
             MainPage = new NavigationPage(new splashScreen());
-           
-
         }
 
         protected override void OnStart()
@@ -28,7 +26,7 @@ namespace SSA.Mobil
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+
         }
     }
 }

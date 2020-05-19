@@ -19,11 +19,11 @@ namespace SSA.Mobil.View
         }
         private async void backIcon_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingsMainScreen());
+            await Navigation.PushAsync(new SettingsMainScreen(null));
         }
         private async void settingsLabel_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingsMainScreen());
+            await Navigation.PushAsync(new SettingsMainScreen(null));
         }
         private void ChangeLocation_Clicked(object sender, EventArgs e)
         {

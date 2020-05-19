@@ -30,7 +30,7 @@
             <StackLayout>
 
                 <Entry x:Name="entryEmail" Placeholder="E-Mail Adress" FontSize="11" PlaceholderColor="#6a6a6a" BackgroundColor="#e9e9e9  " TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
-                <Entry x:Name="entryPass" IsPassword="True" Placeholder="Password" FontSize="11" PlaceholderColor="#6a6a6a" BackgroundColor="#e9e9e9  " TextColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
+                <Entry x:Name="entryPass" IsPassword="True" Placeholder="Password" FontSize="11" PlaceholderColor="#6a6a6a" BackgroundColor="#e9e9e9  " TextColor="#6a6a6a" HeightRequest="40" HorizontalOptions="FillAndExpand" ClearButtonVisibility="Never"></Entry>
 
             </StackLayout>
             <StackLayout>

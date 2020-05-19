@@ -30,6 +30,7 @@
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="Event" TextColor="#8a8a8a" FontSize="10" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label x:Name="UserLocalEmail" Text="" HorizontalOptions="Center" VerticalOptions="EndAndExpand" TextColor="Transparent"></Label>
                     <Image Source="editEvent.png" VerticalOptions="Center" HorizontalOptions="End" Margin="2">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="addEvent_Tapped"></TapGestureRecognizer>
@@ -43,8 +44,9 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="10">
-                                    <Image Source="{Binding imageSource}" HorizontalOptions="Start" VerticalOptions="Center"></Image>
-                                    <Label Text="{Binding Name}" VerticalOptions="Center"></Label>
+                                    <Image Source="starIcon.png" HorizontalOptions="Start" VerticalOptions="Center"></Image>
+                                    <Label Text="{Binding eventIdea}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                    <Label Text="{Binding eventDate}" VerticalOptions="End" HorizontalOptions="End"></Label>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

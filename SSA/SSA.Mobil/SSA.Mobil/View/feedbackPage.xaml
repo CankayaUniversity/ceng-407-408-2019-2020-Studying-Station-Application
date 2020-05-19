@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SSA.Mobil.View.feedbackPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="95*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="90*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image Source="backIcon.png" VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="backFeedbackPage_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Text="Back" TextColor="Blue" FontSize="10" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="backLabel_Tapped" ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="FeedBack" TextColor="#8a8a8a" FontSize="10" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label x:Name="UserLocalEmail" Text="" HorizontalOptions="Center" VerticalOptions="EndAndExpand" TextColor="Transparent"></Label>
+                    <Image Source="editEvent.png" VerticalOptions="Center" HorizontalOptions="End" Margin="2">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="addFeedback_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ListView x:Name="lstViewFeedback" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Label x:Name="scoreLabel" Text="{Binding score}" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+                                    <Image x:Name="scoreImage" Source="starFeedback.jpeg" HorizontalOptions="Start" VerticalOptions="Center"></Image>
+                                    <Label Text="{Binding feedbackIdea}" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
