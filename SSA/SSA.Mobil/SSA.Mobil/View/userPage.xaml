@@ -116,11 +116,7 @@
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="2">
-                        <Label HorizontalOptions="Center" VerticalOptions="End" Text="Delete User ?" >
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="DeleteUser_Tapped"></TapGestureRecognizer>
-                            </Label.GestureRecognizers>
-                        </Label>
+                        
                     </Grid>
                 </Grid>
             </Grid>

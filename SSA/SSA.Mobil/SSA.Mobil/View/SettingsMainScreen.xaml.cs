@@ -3,6 +3,7 @@ using SSA.Mobil.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace SSA.Mobil.View
     {
         userData user1;
         DBHelper DBhelper = new DBHelper();
+        DbFirebaseAuth service = new DbFirebaseAuth();
         public SettingsMainScreen(string email)
         {
             InitializeComponent();
@@ -69,6 +71,21 @@ namespace SSA.Mobil.View
         private async void ChangePassword_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new settingsChangePassword(UserLocalEmail.Text));
+        }
+        private async void DeleteUser_Tapped(object sender, EventArgs e)
+        {
+            var del = await DisplayAlert("Alert", "Are you sure for delete user !", "OK", "CANCEL");
+            if (del == true)
+            {
+                await service.firebaseAuthProvider.DeleteUserAsync(UserLocalData.userToken);
+                await DBhelper.DeleteUser(UserLocalEmail.Text);
+                await Navigation.PushAsync(new LoginPage());
+            }
+            else
+            {
+                return;
+            }
+
         }
     }
 }
