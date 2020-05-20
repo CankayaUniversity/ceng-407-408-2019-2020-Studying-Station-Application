@@ -44,6 +44,7 @@ namespace SSA.Mobil.View
             {
                 await DBhelper.UpdatePersonData(user1.Email, user1.Name, user1.schoolName, user1.Department, user1.Surname, entryPassUpdate2.Text, user1.imageUrl);
                 await db.firebaseAuthProvider.ChangeUserPassword(UserLocalData.userToken,entryPassUpdate2.Text);
+                await DisplayAlert("Alert", "Password successfully changed.", "OK");
             }
             else
             {
